@@ -1,0 +1,6 @@
+com\taskbot\TaskBotApplication.class
+com\taskbot\TaskManagerBot.class
+com\taskbot\model\Task.class
+com\taskbot\handler\CommandHandler.class
+com\taskbot\TaskManagerBot$UserState.class
+com\taskbot\database\DatabaseManager.class

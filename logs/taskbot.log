@@ -1,0 +1,3 @@
+12:01:11.540 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+12:01:11.553 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+12:01:12.321 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!

@@ -1,0 +1,7 @@
+20:49:05.646 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:49:05.653 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:49:06.336 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+21:12:59.545 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /start
+21:13:12.037 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+21:13:18.378 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+21:13:44.470 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /list_trask

@@ -1,0 +1,168 @@
+20:24:36.439 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:24:36.443 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:24:40.320 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+20:26:48.131 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /start
+20:27:02.591 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /addtask
+20:27:14.221 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /addtask
+20:27:16.108 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+20:27:16.306 [my_task_manager_2025_bot Telegram Executor] ERROR com.taskbot.TaskManagerBot - Error handling message
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 198
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at com.taskbot.TaskManagerBot.sendMessage(TaskManagerBot.java:133)
+	at com.taskbot.TaskManagerBot.handleCommand(TaskManagerBot.java:96)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:66)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+20:27:46.361 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /addtask
+20:28:05.998 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: P
+20:28:11.437 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Help
+20:28:15.944 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+20:28:16.155 [my_task_manager_2025_bot Telegram Executor] ERROR com.taskbot.TaskManagerBot - Error handling message
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 198
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at com.taskbot.TaskManagerBot.sendMessage(TaskManagerBot.java:133)
+	at com.taskbot.TaskManagerBot.handleCommand(TaskManagerBot.java:96)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:66)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+20:33:01.311 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:33:01.312 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:33:02.064 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+20:33:02.856 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+20:33:03.056 [my_task_manager_2025_bot Telegram Executor] ERROR com.taskbot.TaskManagerBot - Error handling message
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 198
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at com.taskbot.TaskManagerBot.sendMessage(TaskManagerBot.java:133)
+	at com.taskbot.TaskManagerBot.handleCommand(TaskManagerBot.java:96)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:66)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+20:46:21.301 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+20:46:21.937 [my_task_manager_2025_bot Telegram Executor] ERROR com.taskbot.TaskManagerBot - Error handling message
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 198
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at com.taskbot.TaskManagerBot.sendMessage(TaskManagerBot.java:133)
+	at com.taskbot.TaskManagerBot.handleCommand(TaskManagerBot.java:96)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:66)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+20:46:43.207 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:46:43.208 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:46:44.032 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+20:46:51.844 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Start
+20:46:56.912 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+20:46:57.142 [my_task_manager_2025_bot Telegram Executor] ERROR com.taskbot.TaskManagerBot - Error handling message
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 198
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at com.taskbot.TaskManagerBot.sendMessage(TaskManagerBot.java:133)
+	at com.taskbot.TaskManagerBot.handleCommand(TaskManagerBot.java:96)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:66)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+20:47:06.080 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /start
+20:47:11.564 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /addtask
+20:48:27.835 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:48:27.837 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:48:28.628 [com.taskbot.TaskBotApplication.main()] ERROR com.taskbot.TaskBotApplication - Failed to start bot
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113)
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41)
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65)
+	at com.taskbot.TaskBotApplication.main(TaskBotApplication.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108)
+	... 10 common frames omitted
+20:48:56.183 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:48:56.184 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:48:56.972 [com.taskbot.TaskBotApplication.main()] ERROR com.taskbot.TaskBotApplication - Failed to start bot
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error removing old webhook
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:113)
+	at org.telegram.telegrambots.bots.TelegramLongPollingBot.clearWebhook(TelegramLongPollingBot.java:41)
+	at org.telegram.telegrambots.meta.TelegramBotsApi.registerBot(TelegramBotsApi.java:65)
+	at com.taskbot.TaskBotApplication.main(TaskBotApplication.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.DeleteWebhook query: [404] Not Found
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:19)
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodBoolean.deserializeResponse(BotApiMethodBoolean.java:14)
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115)
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64)
+	at org.telegram.telegrambots.util.WebhookUtils.clearWebhook(WebhookUtils.java:108)
+	... 10 common frames omitted
+20:54:19.184 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+20:54:19.186 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+20:54:20.050 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+20:54:30.473 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: P
+20:54:43.152 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+20:54:53.025 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+20:55:31.785 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Tugas 1
+20:55:31.804 [my_task_manager_2025_bot Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
+java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
+	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
+	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
+	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+22:15:53.557 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /list_task
+22:16:03.921 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Start
+22:16:08.408 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+22:16:20.233 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /list_task
