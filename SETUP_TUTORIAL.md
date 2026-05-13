@@ -11,14 +11,23 @@ Step-by-step guide untuk install Maven dan setup Telegram bot dari zero.
 3. [Verify Installation](#3-verify-installation)
 4. [Create Telegram Bot](#4-create-telegram-bot)
 5. [Build Project](#5-build-project)
-6. [Run Bot](#6-run-bot)
-7. [Troubleshooting](#7-troubleshooting)
+6. [Run Bot - Setup .bat & macOS](#6-run-bot---setup-bat--macos)
+7. [Test Bot](#7-test-bot)
+8. [Troubleshooting](#8-troubleshooting)
 
 ---
 
 ## 1. Install Java 11 JDK
 
-### Step 1.1: Download Java 11
+### Mac OS Option
+1. Buka Terminal
+2. Install menggunakan Homebrew:
+   ```bash
+   brew install openjdk@11
+   sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+   ```
+
+### Step 1.1: Download Java 11 (Windows)
 
 1. Buka browser dan go ke: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 2. Scroll down cari "JDK 11.0.x" (versi latest)
@@ -53,7 +62,14 @@ Step-by-step guide untuk install Maven dan setup Telegram bot dari zero.
 
 ## 2. Install Maven
 
-### Step 2.1: Download Maven
+### Mac OS Option
+1. Buka Terminal
+2. Install melalui Homebrew:
+   ```bash
+   brew install maven
+   ```
+
+### Step 2.1: Download Maven (Windows)
 
 1. Buka browser dan go ke: https://maven.apache.org/download.cgi
 2. Di bagian "Files", cari **Apache Maven 3.8.x** atau versi terbaru
@@ -184,13 +200,20 @@ Here's your bot token:
 
 ### Step 5.1: Navigate to Project Directory
 
+**Windows:**
 ```cmd
 cd c:\Users\F MUSA\PBO\LATIHA
 ```
 
+**macOS/Linux:**
+```bash
+cd /Users/fadhlillahisaulilalbab/Chat-Bot
+```
+
 ### Step 5.2: Clean dan Build
 
-```cmd
+**Windows/macOS/Linux:**
+```bash
 mvn clean install
 ```
 
@@ -206,69 +229,79 @@ Kalo ada error dengan message tentang "missing" files, berarti perlu download de
 
 Check apakah folder `target` sudah ada:
 
+**Windows:**
 ```cmd
 dir target
+```
+
+**macOS/Linux:**
+```bash
+ls -l target
 ```
 
 Harus ada file `telegram-task-bot-1.0-SNAPSHOT.jar`
 
 ---
 
-## 6. Run Bot
+## 6. Run Bot - Setup .bat & macOS
 
-### Step 6.1: Set Environment Variables
+### Option A: Menggunakan file Script Khusus
 
-**Option A: Temporary (Command Prompt Session Only)**
+**Untuk Windows (`run.bat`):**
+1. Buat file baru bernama `run.bat` di root folder project menggunakan Notepad.
+2. Isi file dengan kode berikut (pastikan sudah mengganti Token & Username aslinya):
+   ```cmd
+   @echo off
+   echo Memulai Task Manager Bot...
+   set BOT_USERNAME=your_bot_username
+   set BOT_TOKEN=your_bot_token
+   
+   java -jar target/telegram-task-bot-1.0-SNAPSHOT.jar
+   pause
+   ```
+3. Simpan file dan double-click `run.bat` setiap kali ingin menghidupkan bot.
+
+**Untuk macOS/Linux (`run.sh`):**
+1. Buka Terminal, arahkan ke folder project.
+2. Buat file script:
+   ```bash
+   nano run.sh
+   ```
+3. Isi script tersebut:
+   ```bash
+   #!/bin/bash
+   echo "Memulai Task Manager Bot..."
+   export BOT_USERNAME="my_task_manager_2025_bot"
+   export BOT_TOKEN="8713361511:AAF3SC8503FaeAO7L-PbdajxilxjjHFdomA"
+   
+   java -jar target/telegram-task-bot-1.0-SNAPSHOT.jar
+   ```
+4. Simpan (`Ctrl+O`, `Enter`, `Ctrl+X`), lalu berikan hak eksekusi:
+   ```bash
+   chmod +x run.sh
+   ```
+5. Jalankan script-nya:
+   ```bash
+   ./run.sh
+   ```
+
+### Option B: Menjalankan manual dari Terminal/CMD
+
+**Windows Temporary Session:**
 
 ```cmd
 set BOT_USERNAME=my_task_manager_bot_2025
 set BOT_TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
-```
-
-Ganti:
-
-- `my_task_manager_bot_2025` dengan username bot mu
-- `123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11` dengan token dari BotFather
-
-**Option B: Permanent (Set in System)**
-
-Follow Step 2.2 (Environment Variables) tapi buat:
-
-- Variable name: `BOT_USERNAME`
-- Variable value: `my_task_manager_bot_2025`
-
-Dan:
-
-- Variable name: `BOT_TOKEN`
-- Variable value: `123456:ABC-DEF1234...`
-
-Terus restart Command Prompt!
-
-### Step 6.2: Run Bot
-
-Di folder project (`c:\Users\F MUSA\PBO\LATIHA`), ketik:
-
-```cmd
 mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
 ```
 
-Atau jika sudah built:
+**macOS/Linux Temporary Session:**
 
-```cmd
-java -jar target/telegram-task-bot-1.0-SNAPSHOT.jar
+```bash
+export BOT_USERNAME=my_task_manager_bot_2025
+export BOT_TOKEN=8713361511:AAF3SC8503FaeAO7L-PbdajxilxjjHFdomA
+mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
 ```
-
-### Step 6.3: Verify Bot is Running
-
-Output harus seperti:
-
-```
-✅ Task Manager Bot is running!
-Bot username: my_task_manager_bot_2025
-Press Ctrl+C to stop the bot.
-```
-
-🎉 Bot sudah berjalan!
 
 ---
 
@@ -323,7 +356,7 @@ Bot akan tampilkan semua tasks kamu.
 
 ---
 
-## 7. Troubleshooting
+## 8. Troubleshooting
 
 ### ❌ "mvn: command not found"
 
@@ -355,9 +388,18 @@ Bot akan tampilkan semua tasks kamu.
 
 1. Verify `BOT_USERNAME` dan `BOT_TOKEN` environment variables sudah set
 2. Test dengan manual set:
+
+   **Windows:**
    ```cmd
    set BOT_USERNAME=your_username
    set BOT_TOKEN=your_token
+   mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
+   ```
+   
+   **macOS/Linux:**
+   ```bash
+   export BOT_USERNAME="your_username"
+   export BOT_TOKEN="your_token"
    mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
    ```
 
@@ -369,12 +411,13 @@ Bot akan tampilkan semua tasks kamu.
 
 1. Verify Java 11: `java -version` (harus 11.0.x)
 2. Clean cache:
-   ```cmd
+   ```bash
    mvn clean
    mvn install
    ```
 3. Jika masih error, delete `.m2` folder:
-   - Path: `C:\Users\[YourUsername]\.m2`
+   - **Windows:** `C:\Users\[YourUsername]\.m2`
+   - **macOS/Linux:** `~/.m2`
    - Terus run `mvn install` lagi (akan re-download semua dependencies)
 
 ### ❌ Database error / "taskbot.db permission denied"

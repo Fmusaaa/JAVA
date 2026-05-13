@@ -1,3 +1,94 @@
 12:01:11.540 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
 12:01:11.553 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
 12:01:12.321 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+15:30:46.433 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+15:30:46.434 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+15:30:47.820 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+15:31:05.474 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: p
+15:31:59.240 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+15:32:11.675 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+15:33:48.510 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish project PWL | Cappstone-6 | 15/05/2026 14:30 | 3
+15:33:48.527 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
+java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
+	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
+	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
+	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+15:40:04.207 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+15:40:04.209 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+15:40:04.958 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+15:40:29.398 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: start
+15:40:34.992 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+15:40:43.392 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+15:40:54.274 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish project report | Complete Q1 analysis | 15/03/2025 14:30 | 3
+15:40:54.288 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
+java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
+	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
+	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
+	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+15:41:51.566 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+15:41:51.567 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+15:41:52.363 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+15:42:15.406 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: start
+15:42:19.325 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+15:42:28.640 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+15:42:31.617 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish project PWL | Cappstone-6 | 15/05/2026 14:30 | 3
+15:42:31.629 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
+java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
+	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
+	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
+	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+15:43:44.577 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
+15:43:51.415 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+15:43:56.590 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
+15:43:56.595 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
+java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
+	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
+	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
+	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+15:51:03.661 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+15:51:03.663 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+15:51:04.415 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+15:51:20.340 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+15:51:27.858 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
+15:51:27.871 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
+java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
+	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
+	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
+	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
+15:51:58.611 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
+15:51:58.612 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+15:51:59.344 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+15:52:04.835 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: start
+15:52:08.280 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+15:52:15.772 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+15:52:22.464 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3

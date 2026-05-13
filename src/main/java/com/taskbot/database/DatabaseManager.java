@@ -1,14 +1,20 @@
 package com.taskbot.database;
 
-import com.taskbot.model.Task;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.taskbot.model.Task;
 
 public class DatabaseManager {
     private static final Logger logger = LoggerFactory.getLogger(DatabaseManager.class);
@@ -46,7 +52,7 @@ public class DatabaseManager {
                 "VALUES (?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, userId);
             pstmt.setString(2, title);
@@ -57,9 +63,11 @@ public class DatabaseManager {
 
             pstmt.executeUpdate();
 
-            try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
-                if (generatedKeys.next()) {
-                    int taskId = generatedKeys.getInt(1);
+            // Mendapatkan ID terakhir yang dimasukkan menggunakan SQL query untuk SQLite
+            try (Statement stmt = conn.createStatement();
+                 ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()")) {
+                if (rs.next()) {
+                    int taskId = rs.getInt(1);
                     return getTask(userId, taskId);
                 }
             }
