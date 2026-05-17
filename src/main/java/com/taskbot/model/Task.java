@@ -1,41 +1,48 @@
 package com.taskbot.model;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class Task {
     private int id;
-    private String userId;
+    private int userId;
     private String title;
     private String description;
     private LocalDateTime dueDate;
     private int priority; // 1=Low, 2=Medium, 3=High
-    private boolean completed;
+    private String status;
     private LocalDateTime createdAt;
+    private LocalDateTime completedAt;
+    private boolean reminderSent;
+    private boolean overdueNotified;
+    private int completedSubtasks;
+    private int totalSubtasks;
 
-    public Task(String userId, String title, String description, LocalDateTime dueDate, int priority) {
+    public Task(int userId, String title, String description, LocalDateTime dueDate, int priority) {
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
-        this.completed = false;
+        this.status = "pending";
         this.createdAt = LocalDateTime.now();
     }
 
-    public Task(int id, String userId, String title, String description, LocalDateTime dueDate,
-                int priority, boolean completed, LocalDateTime createdAt) {
+    public Task(int id, int userId, String title, String description, LocalDateTime dueDate,
+                int priority, String status, LocalDateTime createdAt, LocalDateTime completedAt,
+                boolean reminderSent, boolean overdueNotified) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
-        this.completed = completed;
+        this.status = status;
         this.createdAt = createdAt;
+        this.completedAt = completedAt;
+        this.reminderSent = reminderSent;
+        this.overdueNotified = overdueNotified;
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -44,8 +51,12 @@ public class Task {
         this.id = id;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getTitle() {
@@ -81,15 +92,67 @@ public class Task {
     }
 
     public boolean isCompleted() {
-        return completed;
+        return "completed".equalsIgnoreCase(status);
     }
 
     public void setCompleted(boolean completed) {
-        this.completed = completed;
+        this.status = completed ? "completed" : "pending";
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getCompletedAt() {
+        return completedAt;
+    }
+
+    public void setCompletedAt(LocalDateTime completedAt) {
+        this.completedAt = completedAt;
+    }
+
+    public boolean isReminderSent() {
+        return reminderSent;
+    }
+
+    public void setReminderSent(boolean reminderSent) {
+        this.reminderSent = reminderSent;
+    }
+
+    public boolean isOverdueNotified() {
+        return overdueNotified;
+    }
+
+    public void setOverdueNotified(boolean overdueNotified) {
+        this.overdueNotified = overdueNotified;
+    }
+
+    public int getCompletedSubtasks() {
+        return completedSubtasks;
+    }
+
+    public void setCompletedSubtasks(int completedSubtasks) {
+        this.completedSubtasks = completedSubtasks;
+    }
+
+    public int getTotalSubtasks() {
+        return totalSubtasks;
+    }
+
+    public void setTotalSubtasks(int totalSubtasks) {
+        this.totalSubtasks = totalSubtasks;
     }
 
     public String getPriorityLabel() {
@@ -99,14 +162,5 @@ public class Task {
             case 3 -> "🔴 High";
             default -> "Unknown";
         };
-    }
-
-    public String formatForDisplay() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-        String dueStr = dueDate != null ? dueDate.format(formatter) : "No due date";
-        String status = completed ? "✅ DONE" : "⏳ PENDING";
-
-        return String.format("ID: %d | %s\n📝 %s\n%s\n📅 %s\n%s",
-            id, status, title, description, dueStr, getPriorityLabel());
     }
 }

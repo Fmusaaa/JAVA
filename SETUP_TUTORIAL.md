@@ -204,7 +204,7 @@ Here's your bot token:
 ```cmd
 cd c:\Users\F MUSA\PBO\LATIHA
 ```
-
+ai 
 **macOS/Linux:**
 ```bash
 cd /Users/fadhlillahisaulilalbab/Chat-Bot
@@ -249,7 +249,7 @@ Harus ada file `telegram-task-bot-1.0-SNAPSHOT.jar`
 
 **Untuk Windows (`run.bat`):**
 1. Buat file baru bernama `run.bat` di root folder project menggunakan Notepad.
-2. Isi file dengan kode berikut (pastikan sudah mengganti Token & Username aslinya):
+2. Isi file dengan kode berikut (jangan commit token asli ke repo):
    ```cmd
    @echo off
    echo Memulai Task Manager Bot...
@@ -271,8 +271,8 @@ Harus ada file `telegram-task-bot-1.0-SNAPSHOT.jar`
    ```bash
    #!/bin/bash
    echo "Memulai Task Manager Bot..."
-   export BOT_USERNAME="my_task_manager_2025_bot"
-   export BOT_TOKEN="8713361511:AAF3SC8503FaeAO7L-PbdajxilxjjHFdomA"
+   export BOT_USERNAME="your_bot_username"
+   export BOT_TOKEN="your_bot_token"
    
    java -jar target/telegram-task-bot-1.0-SNAPSHOT.jar
    ```
@@ -291,7 +291,7 @@ Harus ada file `telegram-task-bot-1.0-SNAPSHOT.jar`
 
 ```cmd
 set BOT_USERNAME=my_task_manager_bot_2025
-set BOT_TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+set BOT_TOKEN=your_bot_token
 mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
 ```
 
@@ -299,7 +299,7 @@ mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
 
 ```bash
 export BOT_USERNAME=my_task_manager_bot_2025
-export BOT_TOKEN=8713361511:AAF3SC8503FaeAO7L-PbdajxilxjjHFdomA
+export BOT_TOKEN=your_bot_token
 mvn exec:java -Dexec.mainClass="com.taskbot.TaskBotApplication"
 ```
 

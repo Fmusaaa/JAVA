@@ -1,94 +1,434 @@
-12:01:11.540 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
-12:01:11.553 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
-12:01:12.321 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
-15:30:46.433 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
-15:30:46.434 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
-15:30:47.820 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
-15:31:05.474 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: p
-15:31:59.240 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
-15:32:11.675 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
-15:33:48.510 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish project PWL | Cappstone-6 | 15/05/2026 14:30 | 3
-15:33:48.527 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
-	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
-	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
-	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
-	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
+00:52:19.787 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+00:52:19.793 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+00:52:19.793 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+00:52:20.600 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+00:53:14.237 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+01:07:08.006 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
+01:08:37.167 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Devin |kenalan sama salwa | 30/06/2026 23:59 | 3
+01:10:21.608 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: I love salwa bro
+01:10:31.816 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: AH GAPAHAM LU
+01:11:47.323 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:11:47.740 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:909)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:11:48.225 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:909)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:11:48.908 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:909)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:11:51.390 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:909)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:11:54.708 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:909)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:11:59.772 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:12:04.835 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org
+java.net.UnknownHostException: api.telegram.org
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:909)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:12:13.844 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:12:25.206 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:12:44.663 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:13:26.266 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:13:56.190 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:14:33.811 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:16:50.854 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:18:10.545 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:23:20.303 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:26:12.976 [my_task_manager_2025_bot Telegram Connection] ERROR o.t.t.u.DefaultBotSession - api.telegram.org: nodename nor servname provided, or not known
+java.net.UnknownHostException: api.telegram.org: nodename nor servname provided, or not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:249)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+01:29:51.967 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+01:29:51.972 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+01:29:51.972 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+01:29:52.883 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+02:52:20.835 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+02:52:20.838 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI parser enabled with model gemini-2.5-flash-lite
+02:52:20.871 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+02:52:20.871 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+02:52:21.618 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+02:52:48.071 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Besok jam 8 ingetin gw kerjain laporan PBO prioritas tinggi
+02:52:56.781 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: helo
+02:53:11.909 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: gw devin
+02:53:27.595 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: temen yg punya bot ini
+02:53:41.793 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: jokowi
+02:54:08.262 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: hal lain
+02:54:21.935 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: 5+9 hasilnya berapa
+02:55:21.978 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: edit yang task #8-DEVIN DATE DUE NYA GANTI 16/06/2026 JAM NYA SAMA
+03:06:54.788 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+03:06:54.792 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI parser enabled with model gemini-2.5-flash-lite
+03:06:54.821 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI assistant enabled with model gemini-2.5-flash-lite
+03:06:54.822 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+03:06:54.823 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+03:06:55.574 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+03:07:06.627 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
+03:07:24.327 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /ask jelasin inheritance java
+03:09:11.069 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /ask gimana cara kenalan sama seseorang
+03:19:44.121 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+03:19:44.124 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI parser enabled with model gemini-2.5-flash-lite
+03:19:44.153 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI assistant enabled with model gemini-2.5-flash-lite
+03:19:44.154 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+03:19:44.155 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+03:19:44.889 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+03:20:03.578 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: \ask overloading apa ya
+03:20:18.206 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: yes
+03:20:36.414 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /ask apa itu overloading di java
+03:21:56.199 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /ask kuliner malem semarang apa
+03:21:57.713 [my_task_manager_2025_bot Telegram Executor] ERROR com.taskbot.ai.GeminiAiAssistant - Gemini assistant error
+java.io.IOException: Gemini API error 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+	at com.taskbot.ai.GeminiAiAssistant.sendRequest(GeminiAiAssistant.java:61)
+	at com.taskbot.ai.GeminiAiAssistant.answer(GeminiAiAssistant.java:41)
+	at com.taskbot.TaskManagerBot.handleCommand(TaskManagerBot.java:179)
+	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:106)
+	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:88)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
 	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
-15:40:04.207 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
-15:40:04.209 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
-15:40:04.958 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
-15:40:29.398 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: start
-15:40:34.992 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
-15:40:43.392 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
-15:40:54.274 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish project report | Complete Q1 analysis | 15/03/2025 14:30 | 3
-15:40:54.288 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
-	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
-	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
-	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
-	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
-15:41:51.566 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
-15:41:51.567 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
-15:41:52.363 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
-15:42:15.406 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: start
-15:42:19.325 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
-15:42:28.640 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
-15:42:31.617 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish project PWL | Cappstone-6 | 15/05/2026 14:30 | 3
-15:42:31.629 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
-	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
-	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
-	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
-	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
-15:43:44.577 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
-15:43:51.415 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
-15:43:56.590 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
-15:43:56.595 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
-	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
-	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
-	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
-	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
-15:51:03.661 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
-15:51:03.663 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
-15:51:04.415 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
-15:51:20.340 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
-15:51:27.858 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
-15:51:27.871 [my_task_manager_bot_2025 Telegram Executor] ERROR c.taskbot.database.DatabaseManager - Error adding task
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:361)
-	at com.taskbot.database.DatabaseManager.addTask(DatabaseManager.java:60)
-	at com.taskbot.handler.CommandHandler.addTask(CommandHandler.java:82)
-	at com.taskbot.TaskManagerBot.handleMessage(TaskManagerBot.java:71)
-	at com.taskbot.TaskManagerBot.onUpdateReceived(TaskManagerBot.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
-	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312)
-15:51:58.611 [com.taskbot.TaskBotApplication.main()] INFO  c.taskbot.database.DatabaseManager - Database initialized successfully
-15:51:58.612 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
-15:51:59.344 [com.taskbot.TaskBotApplication.main()] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
-15:52:04.835 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: start
-15:52:08.280 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /help
-15:52:15.772 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /add_task
-15:52:22.464 [my_task_manager_bot_2025 Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: Finish homework | Math and English | 15/03/2025 18:00 | 3
+03:22:15.198 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /ask method itu apa
+03:22:34.727 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 8434339373: /ask makan apa ya enaknya kalau malem
+03:52:16.936 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+03:52:16.939 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI parser enabled with model gemini-2.5-flash-lite
+03:52:16.975 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI assistant enabled with model gemini-2.5-flash-lite
+03:52:16.977 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+03:52:16.977 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+03:52:17.739 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+05:09:55.282 [main] INFO  c.taskbot.database.DatabaseManager - Database initialized using SQLITE
+05:09:55.284 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI parser enabled with model gemini-2.5-flash-lite
+05:09:55.313 [main] INFO  com.taskbot.TaskManagerBot - Gemini AI assistant enabled with model gemini-2.5-flash-lite
+05:09:55.314 [main] INFO  c.taskbot.service.ReminderScheduler - Reminder scheduler started. Interval: 1 minute(s)
+05:09:55.314 [main] INFO  com.taskbot.TaskManagerBot - TaskManagerBot initialized
+05:09:56.102 [main] INFO  com.taskbot.TaskBotApplication - Bot started successfully!
+05:09:56.864 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 6715491244: /start
+05:24:12.303 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 6715491244: woi
+05:24:27.662 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 6715491244: tugas saya adalah mencintai dirinya
+05:25:25.966 [my_task_manager_2025_bot Telegram Executor] INFO  com.taskbot.TaskManagerBot - Message from user 6715491244: tugas anda hanya perlu meyakinkan saya agar saya bisa mencintainya

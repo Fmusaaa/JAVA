@@ -1,8 +1,9 @@
-```bash
-   #!/bin/bash
-   echo "Memulai Task Manager Bot..."
-   export BOT_USERNAME="my_task_manager_2025_bot"
-   export BOT_TOKEN="8713361511:AAF3SC8503FaeAO7L-PbdajxilxjjHFdomA"
-   
-   java -jar target/telegram-task-bot-1.0-SNAPSHOT.jar
-   ```
+File ini sebelumnya berisi contoh token bot. Token tidak boleh disimpan di repo.
+
+Gunakan file run.sh dan environment variable sebagai gantinya:
+
+1. Salin config.example.env menjadi .env
+2. Isi BOT_USERNAME dan BOT_TOKEN di .env lokal
+3. Jalankan:
+
+./run.sh

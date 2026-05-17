@@ -1,3 +1,9 @@
 # JAVA
 HIDUP JAVA,HIDUP JOKOWI
 FILE INI ADA FILE LATIHAN (PEMROGRAMAN BERBASIS OBJEK)
+
+Dokumentasi lengkap project bot ada di:
+
+```text
+DOKUMENTASI_PROJECT.md
+```

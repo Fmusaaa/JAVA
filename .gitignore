@@ -3,6 +3,9 @@
 
 # Log file
 *.log
+logs/
+.env
+taskbot.db
 
 # BlueJ files
 *.ctxt
